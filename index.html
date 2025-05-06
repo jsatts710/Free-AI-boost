@@ -13,6 +13,8 @@
       color: #fff;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
     }
     header {
       background-color: #1a1a1a;
@@ -27,11 +29,23 @@
       font-size: 1.1rem;
       color: #ccc;
     }
-    main {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
       padding: 2rem;
+    }
+    main {
+      flex: 3;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
+      margin-right: 2rem;
+    }
+    aside {
+      flex: 1;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
     }
     .tool {
       background-color: #222;
@@ -41,7 +55,6 @@
     }
     .tool img {
       width: 100%;
-      height: auto;
       border-radius: 10px;
     }
     .tool h3 {
@@ -51,9 +64,9 @@
       font-size: 0.95rem;
       color: #ccc;
     }
-    .tool a {
-      color: #00f;
-      text-decoration: underline;
+    .ads {
+      margin: 2rem auto;
+      text-align: center;
     }
     footer {
       text-align: center;
@@ -61,17 +74,16 @@
       background: #1a1a1a;
       color: #aaa;
     }
-    .ads {
-      margin: 2rem auto;
-      text-align: center;
+    .blog-post {
+      margin-bottom: 1.5rem;
     }
-    nav a {
-      color: #aaa;
-      margin: 0 10px;
-      text-decoration: none;
+    .blog-post h4 {
+      margin: 0 0 0.5rem;
+      color: #66f;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .blog-post p {
+      color: #ccc;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -79,8 +91,8 @@
   <header>
     <h1>AI Got You</h1>
     <p>Your go-to hub for the best free AI tools and resources online</p>
-  </header>  <div class="ads">
-    <!-- Google AdSense Ad Unit -->
+  </header>
+  <div class="ads">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1240850870954887"
@@ -88,37 +100,56 @@
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>  <main>
-    <div class="tool">
-      <img src="images/chatgpt.jpg" alt="ChatGPT">
-      <h3>ChatGPT</h3>
-      <p>Converse with AI to write, brainstorm, or automate text tasks. Perfect for content creators, students, and businesses alike.</p>
-      <a href="#">Try ChatGPT Free</a>
-    </div>
-    <div class="tool">
-      <img src="images/grammarly.jpg" alt="Grammarly">
-      <h3>Grammarly</h3>
-      <p>Improve writing instantly with smart grammar and tone suggestions. Great for email, blogging, and reports.</p>
-      <a href="#">Sign up free</a>
-    </div>
-    <div class="tool">
-      <img src="images/canva.jpg" alt="Canva AI">
-      <h3>Canva AI</h3>
-      <p>Create stunning visuals and marketing content in seconds with AI-assisted design features.</p>
-      <a href="#">Start Designing</a>
-    </div>
-    <div class="tool">
-      <img src="images/copyai.jpg" alt="Copy.ai">
-      <h3>Copy.ai</h3>
-      <p>Generate product descriptions, ads, and SEO-friendly content using smart AI prompts.</p>
-      <a href="#">Use Free Plan</a>
-    </div>
-  </main>  <footer>
+  </div>
+  <div class="container">
+    <main>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT">
+        <h3>ChatGPT</h3>
+        <p>Converse with AI to write, brainstorm, or automate text tasks. Perfect for content creators, students, and businesses alike.</p>
+        <a href="#" style="color:#00f">Try ChatGPT Free</a>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Grammarly_Logo.svg/2560px-Grammarly_Logo.svg.png" alt="Grammarly">
+        <h3>Grammarly</h3>
+        <p>Improve writing instantly with smart grammar and tone suggestions. Great for email, blogging, and reports.</p>
+        <a href="#" style="color:#00f">Sign up free</a>
+      </div>
+      <div class="tool">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Canva_Logo.png" alt="Canva AI">
+        <h3>Canva AI</h3>
+        <p>Create stunning visuals and marketing content in seconds with AI-assisted design features.</p>
+        <a href="#" style="color:#00f">Start Designing</a>
+      </div>
+      <div class="tool">
+        <img src="https://cdn.copy.ai/wp-content/uploads/2023/03/21135645/CopyAI_logo_horizontal.png" alt="Copy.ai">
+        <h3>Copy.ai</h3>
+        <p>Generate product descriptions, ads, and SEO-friendly content using smart AI prompts.</p>
+        <a href="#" style="color:#00f">Use Free Plan</a>
+      </div>
+    </main>
+    <aside>
+      <h3>Latest Blog Posts</h3>
+      <div class="blog-post">
+        <h4>5 AI Tools That Are Changing the Game in 2025</h4>
+        <p>Discover how new AI tools are transforming productivity, creativity, and automation this year.</p>
+      </div>
+      <div class="blog-post">
+        <h4>Beginner's Guide to Using ChatGPT Effectively</h4>
+        <p>Maximize the value of ChatGPT for writing, coding, research and more with these expert tips.</p>
+      </div>
+      <div class="blog-post">
+        <h4>Boost Your Marketing with Canva AI</h4>
+        <p>Learn how Canva's AI tools can simplify and supercharge your content creation process.</p>
+      </div>
+    </aside>
+  </div>
+  <footer>
     <p>&copy; 2025 AI Got You. All rights reserved.</p>
-    <nav>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+    <nav style="margin-top: 10px;">
+      <a href="privacy.html" style="color: #aaa; margin: 0 10px;">Privacy Policy</a>
+      <a href="disclaimer.html" style="color: #aaa; margin: 0 10px;">Disclaimer</a>
+      <a href="affiliate-disclosure.html" style="color: #aaa; margin: 0 10px;">Affiliate Disclosure</a>
     </nav>
   </footer>
 </body>
