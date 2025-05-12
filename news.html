@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI News & Updates - AI Got You</title>
-  <meta name="description" content="Stay updated with the latest AI trends, tools, and news from trusted sources, all in one place." />
+  <meta name="description" content="Stay updated with the latest news, breakthroughs, and innovations in AI technology."/>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,33 +25,84 @@
     }
     main {
       padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
     }
-    iframe {
-      width: 100%;
-      height: 800px;
-      border: none;
+    #rss-feed-container {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+      max-width: 800px;
     }
-    a {
+    #rss-feed li {
+      margin-bottom: 15px;
+      list-style: none;
+    }
+    #rss-feed a {
       color: #66f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #rss-feed p {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin: 5px 0 15px;
+    }
+    nav a {
+      color: #aaa;
+      margin: 0 10px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>AI News & Updates</h1>
-    <p>Fresh insights from across the web – updated automatically.</p>
-    <p><a href="index.html">← Back to Home</a></p>
+    <p>Latest breakthroughs and news in AI and machine learning</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Embed from FeedWind RSS for AI News -->
-    <iframe src="https://feed.mikle.com/widget/v2/168965/?preloader-text=Loading+AI+News..." scrolling="yes" allowtransparency="true"></iframe>
+    <div id="rss-feed-container">
+      <h2>Latest AI Headlines</h2>
+      <ul id="rss-feed">
+        <li>Loading news...</li>
+      </ul>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 AI Got You. All rights reserved.</p>
   </footer>
+
+  <script>
+    async function loadRSS() {
+      const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://techcrunch.com/tag/artificial-intelligence/feed/';
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const feed = data.items.slice(0, 6);
+        const container = document.getElementById('rss-feed');
+        container.innerHTML = '';
+
+        feed.forEach(item => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <a href="${item.link}" target="_blank">${item.title}</a>
+            <p>${new Date(item.pubDate).toLocaleDateString()}</p>
+          `;
+          container.appendChild(li);
+        });
+      } catch (error) {
+        document.getElementById('rss-feed').innerHTML = '<li>Could not load feed. Please try again later.</li>';
+      }
+    }
+    loadRSS();
+  </script>
+
 </body>
 </html>
