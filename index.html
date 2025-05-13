@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Got You - Smart AI Tools for Work & Life</title>
-  <meta name="description" content="Discover top-rated free AI tools to boost productivity, automate tasks, and grow your business. Curated resources and honest reviews." />
+  <meta name="description" content="Discover top-rated free AI tools to boost productivity, automate tasks, and grow your business. Curated resources, honest reviews, and bonus content." />
   <link rel="stylesheet" href="styles.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1240850870954887" crossorigin="anonymous"></script>
   <style>
@@ -29,17 +30,21 @@
     }
     nav {
       text-align: center;
-      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: #222;
     }
     nav a {
+      margin: 0 15px;
       color: #66f;
-      margin: 0 1rem;
       text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       padding: 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
     .tool {
@@ -50,8 +55,10 @@
     }
     .tool img {
       width: 100%;
-      height: auto;
+      max-height: 150px;
+      object-fit: contain;
       border-radius: 10px;
+      background-color: #fff;
     }
     .tool h3 {
       margin: 0.5rem 0;
@@ -60,15 +67,15 @@
       font-size: 0.95rem;
       color: #ccc;
     }
+    .ads {
+      margin: 2rem auto;
+      text-align: center;
+    }
     footer {
       text-align: center;
       padding: 2rem;
       background: #1a1a1a;
       color: #aaa;
-    }
-    .ads {
-      margin: 2rem auto;
-      text-align: center;
     }
   </style>
 </head>
@@ -77,12 +84,16 @@
     <h1>AI Got You</h1>
     <p>Your go-to hub for the best free AI tools and resources online</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="news.html">AI News</a>
     <a href="bonus.html">Bonus Tools</a>
-    <a href="privacy.html">Privacy Policy</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
   </nav>
+
   <div class="ads">
     <!-- Google AdSense Ad Unit -->
     <ins class="adsbygoogle"
@@ -93,38 +104,43 @@
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
+
   <main>
     <div class="tool">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT">
       <h3>ChatGPT</h3>
       <p>Converse with AI to write, brainstorm, or automate text tasks. Perfect for content creators, students, and businesses alike.</p>
-      <a href="#" style="color:#00f">Try ChatGPT Free</a>
+      <a href="https://chat.openai.com" style="color:#00f" target="_blank">Try ChatGPT Free</a>
     </div>
+
     <div class="tool">
-      <img src="https://static.grammarly.com/assets/files/67f6389baf3ddf7b8e5f38bca4907f5f/logo.png" alt="Grammarly">
+      <img src="https://static-00.iconduck.com/assets.00/grammarly-icon-2048x2048-nf4hvk8y.png" alt="Grammarly">
       <h3>Grammarly</h3>
       <p>Improve writing instantly with smart grammar and tone suggestions. Great for email, blogging, and reports.</p>
-      <a href="#" style="color:#00f">Sign up free</a>
+      <a href="https://www.grammarly.com/" style="color:#00f" target="_blank">Sign Up Free</a>
     </div>
+
     <div class="tool">
-      <img src="https://static.canva.com/static/images/meta-image.png" alt="Canva AI">
+      <img src="https://static-00.iconduck.com/assets.00/canva-icon-2048x2048-e90o3zcw.png" alt="Canva AI">
       <h3>Canva AI</h3>
       <p>Create stunning visuals and marketing content in seconds with AI-assisted design features.</p>
-      <a href="#" style="color:#00f">Start Designing</a>
+      <a href="https://www.canva.com/features/ai/" style="color:#00f" target="_blank">Start Designing</a>
     </div>
+
     <div class="tool">
-      <img src="https://assets-global.website-files.com/60c6c4505e2c2aa9395975b4/615cdd63f43e6d43f75e0d0f_copyai-logo.png" alt="Copy.ai">
+      <img src="https://logos-world.net/wp-content/uploads/2023/02/CopyAI-Logo.png" alt="Copy.ai">
       <h3>Copy.ai</h3>
       <p>Generate product descriptions, ads, and SEO-friendly content using smart AI prompts.</p>
-      <a href="#" style="color:#00f">Use Free Plan</a>
+      <a href="https://www.copy.ai/" style="color:#00f" target="_blank">Use Free Plan</a>
     </div>
   </main>
+
   <footer>
     <p>&copy; 2025 AI Got You. All rights reserved.</p>
     <nav>
-      <a href="privacy.html" style="color:#aaa; margin: 0 10px;">Privacy Policy</a>
-      <a href="disclaimer.html" style="color:#aaa; margin: 0 10px;">Disclaimer</a>
-      <a href="affiliate-disclosure.html" style="color:#aaa; margin: 0 10px;">Affiliate Disclosure</a>
+      <a href="privacy.html" style="color: #aaa;">Privacy Policy</a> |
+      <a href="disclaimer.html" style="color: #aaa;">Disclaimer</a> |
+      <a href="affiliate-disclosure.html" style="color: #aaa;">Affiliate Disclosure</a>
     </nav>
   </footer>
 </body>
