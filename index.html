@@ -28,13 +28,15 @@
       color: #ccc;
     }
     nav {
+      background-color: #1a1a1a;
       text-align: center;
-      margin-top: 1rem;
+      padding: 1rem;
     }
     nav a {
-      color: #66f;
-      margin: 0 10px;
+      color: #aaa;
+      margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
     }
     main {
       padding: 2rem;
@@ -47,12 +49,17 @@
       border-radius: 12px;
       padding: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease;
+    }
+    .tool:hover {
+      transform: translateY(-5px);
     }
     .tool img {
       width: 100%;
+      height: 160px;
+      object-fit: contain;
+      background: #000;
       border-radius: 10px;
-      object-fit: cover;
-      height: 150px;
     }
     .tool h3 {
       margin: 0.5rem 0;
@@ -71,7 +78,7 @@
       background: #1a1a1a;
       color: #aaa;
     }
-    footer a {
+    footer nav a {
       color: #aaa;
       margin: 0 10px;
       text-decoration: none;
@@ -82,13 +89,11 @@
   <header>
     <h1>AI Got You</h1>
     <p>Your go-to hub for the best free AI tools and resources online</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="news.html">AI News</a>
-      <a href="bonus.html">Bonus Content</a>
-    </nav>
-  </header>  <div class="ads">
-    <!-- Google AdSense Ad Unit -->
+  </header>  <nav>
+    <a href="index.html">Home</a>
+    <a href="bonus.html">Bonus Tools</a>
+    <a href="news.html">AI News</a>
+  </nav>  <div class="ads">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1240850870954887"
@@ -100,26 +105,32 @@
     <div class="tool">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT">
       <h3>ChatGPT</h3>
-      <p>Converse with AI to write, brainstorm, or automate text tasks. Perfect for content creators, students, and businesses alike.</p>
+      <p>Converse with AI to write, brainstorm, or automate text tasks. Great for content creators and professionals.</p>
       <a href="#" style="color:#00f">Try ChatGPT Free</a>
     </div>
     <div class="tool">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Grammarly_Logo.png" alt="Grammarly">
+      <img src="https://static-00.iconduck.com/assets.00/grammarly-icon-512x512-4zoxhqos.png" alt="Grammarly">
       <h3>Grammarly</h3>
-      <p>Improve writing instantly with smart grammar and tone suggestions. Great for email, blogging, and reports.</p>
-      <a href="#" style="color:#00f">Sign up free</a>
+      <p>Instant grammar checks and suggestions for clear, effective writing across the web.</p>
+      <a href="#" style="color:#00f">Sign Up Free</a>
     </div>
     <div class="tool">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Canva_logo_2021.svg" alt="Canva AI">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Canva_logo_2021.svg" alt="Canva AI">
       <h3>Canva AI</h3>
-      <p>Create stunning visuals and marketing content in seconds with AI-assisted design features.</p>
+      <p>Design professional graphics with AI help — perfect for social posts, branding and marketing.</p>
       <a href="#" style="color:#00f">Start Designing</a>
     </div>
     <div class="tool">
-      <img src="https://cdn.copy.ai/assets/images/logos/logo-dark.png" alt="Copy.ai">
+      <img src="https://seeklogo.com/images/C/copy-ai-logo-507B8E1528-seeklogo.com.png" alt="Copy.ai">
       <h3>Copy.ai</h3>
-      <p>Generate product descriptions, ads, and SEO-friendly content using smart AI prompts.</p>
+      <p>Generate ad copy, product descriptions, and blog intros quickly with smart templates.</p>
       <a href="#" style="color:#00f">Use Free Plan</a>
+    </div>
+    <div class="tool">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/OpenAI_Logo.svg" alt="OpenAI">
+      <h3>OpenAI</h3>
+      <p>Powerful models like GPT-4 and DALL·E to transform your AI projects and apps.</p>
+      <a href="#" style="color:#00f">Explore OpenAI</a>
     </div>
   </main>  <footer>
     <p>&copy; 2025 AI Got You. All rights reserved.</p>
